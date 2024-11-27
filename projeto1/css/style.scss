@@ -1,5 +1,9 @@
-$cor-primaria: #B06FF6;
-$cor-secundaria: #630BC1;
+$cor-primaria: #123249;
+$cor-secundaria: #0c6aad;
+$cor-terciaria:#9fd7ff;
+$cor-quarternaria: #203a21;
+$cor-texto: #000000;
+$letra-grande: xx-large;
 
 body {
     background-color: #E6F4FF;
@@ -14,6 +18,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 10px;
 
     img {
         width: 40px;
@@ -36,14 +41,17 @@ nav {
     a {
         text-decoration: none;
         color: $cor-secundaria;
+        font-size: larger;
     }
 }
 
 main {
-    background-image: url("https://catracalivre.com.br/cdn-cgi/image/f=auto,q=60,width=960,height=99999,fit=scale-down/wp-content/uploads/2023/11/istock-1221548744.jpg");
+    background-image: url("https://b2895550.smushcdn.com/2895550/wp-content/uploads/2024/01/chapeu-de-palha-mantidos-em-cadeira-de-praia-vazia-1024x683.jpg?lossy=1&strip=1&webp=1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 500px;
+    min-height: 700px;
+    margin-left: 15%;
+    margin-right: 15%;
     text-align: center;
     align-items: center;
     display: flex;
@@ -53,19 +61,92 @@ main {
 
 h1,
 h4 {
-    color: $cor-secundaria;
+    color: $cor-texto;
+    font-size: $letra-grande;
 }
 
 input {
     border: 2x solid $cor-secundaria;
     margin: 5px;
+    font-size: medium;
 }
 
 button {
-    background-color: $cor-primaria;
+    background-color: $cor-secundaria;
     border-color: $cor-secundaria;
+    font-size: medium;
 }
 
 button:hover {
     background-color: lighten($cor-primaria, 5%);
+}
+
+.artigo-irlanda {
+    margin: 15%;
+    font-size: 30px;
+    line-height: 60px;
+    padding: 20px;
+
+    img {
+        min-height: 500px;
+        width: 1000px;
+    }
+}
+
+.atividadeMixin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    @mixin card ($corFundo,$border-radius,$padding) {
+        background-color: $corFundo;
+        border-radius: $border-radius;
+        padding: $padding;
+        width: 300px;
+        min-height: 250px;
+    }
+
+    img {
+        width: 220px;
+        height: 200px;
+    }
+
+    .car-primario {
+        @include card($cor-terciaria, 10px, 15px);
+    }
+
+    .car-secundario {
+        @include card($cor-terciaria, 10px, 15px);
+    }
+
+    .car-terciario {
+        @include card($cor-terciaria, 10px, 15px);
+    }
+
+    .car-quarternario{
+        @include card($cor-terciaria, 10px, 15px);
+    }
+    button {
+        display: flex;
+        flex-direction: row;
+    }
+    
+}
+
+.ultimo-conteudo {
+    table {
+        width: 100%;
+        color: $cor-quarternaria;
+        text-align: center;
+        
+        th {
+            border: 1px solid $cor-quarternaria;
+        }
+
+        td {
+            border-bottom: 1px solid $cor-quarternaria;
+        }
+    }
 }
