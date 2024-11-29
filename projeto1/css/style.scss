@@ -1,17 +1,15 @@
 $cor-primaria: #123249;
 $cor-secundaria: #0c6aad;
-$cor-terciaria:#9fd7ff;
+$cor-terciaria: #9fd7ff;
 $cor-quarternaria: #203a21;
+$cor-assunto: #58595a;
+$cor-assunto-p: #000000;
 $cor-texto: #000000;
+$cor-texto-b: #ffffff;
 $letra-grande: xx-large;
 
 body {
-    background-color: #E6F4FF;
-}
-
-img {
-    width: 40px;
-    height: 40px;
+    background-color: #87aecb;
 }
 
 nav {
@@ -46,12 +44,12 @@ nav {
 }
 
 main {
-    background-image: url("https://b2895550.smushcdn.com/2895550/wp-content/uploads/2024/01/chapeu-de-palha-mantidos-em-cadeira-de-praia-vazia-1024x683.jpg?lossy=1&strip=1&webp=1.jpg");
+    background-image: url("../img/Ceu.jfif");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 700px;
-    margin-left: 15%;
-    margin-right: 15%;
+    min-height: 800px;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: center;
     align-items: center;
     display: flex;
@@ -59,14 +57,18 @@ main {
     justify-content: center;
 }
 
-h1,
-h4 {
-    color: $cor-texto;
+h1 {
+    color: $cor-primaria;
     font-size: $letra-grande;
 }
 
+h4 {
+    color: $cor-texto;
+    font-size: larger;
+}
+
 input {
-    border: 2x solid $cor-secundaria;
+    border: 2px solid $cor-secundaria;
     margin: 5px;
     font-size: medium;
 }
@@ -100,7 +102,8 @@ button:hover {
     margin-left: 10%;
     margin-right: 10%;
 
-    @mixin card ($corFundo,$border-radius,$padding) {
+    /*Função mixin*/
+    @mixin card ($corFundo, $border-radius, $padding) {
         background-color: $corFundo;
         border-radius: $border-radius;
         padding: $padding;
@@ -125,28 +128,98 @@ button:hover {
         @include card($cor-terciaria, 10px, 15px);
     }
 
-    .car-quarternario{
+    .car-quarternario {
         @include card($cor-terciaria, 10px, 15px);
     }
+
     button {
         display: flex;
         flex-direction: row;
     }
-    
+
 }
 
+/*Detalhe da tabela*/
 .ultimo-conteudo {
+
+    h2 {
+        text-align: center;
+        color: $cor-primaria;
+    }
+
     table {
         width: 100%;
         color: $cor-quarternaria;
         text-align: center;
-        
+
+        /*Função*/
+        @mixin linha($tmBorder) {
+            border-bottom: $tmBorder solid $cor-quarternaria;
+        }
+
+        @mixin colunaAssunto($corAssunto) {
+            background-color: $corAssunto;
+            min-width: 40%
+        }
+
+        /*Herança*/
+        .corLetraAssunto {
+            color: $cor-texto-b;
+            text-transform: uppercase;
+        }
+
         th {
-            border: 1px solid $cor-quarternaria;
+            @include linha(2px);
+            text-transform: uppercase;
         }
 
         td {
-            border-bottom: 1px solid $cor-quarternaria;
+            @include linha(1px);
+            padding: 30px;
         }
+
+        .primeiras {
+            @include colunaAssunto($cor-secundaria);
+            @extend .corLetraAssunto;
+        }
+
+        .terceira {
+            @include colunaAssunto($cor-assunto);
+            @extend .corLetraAssunto;
+        }
+
+        .quarta {
+            @include colunaAssunto($cor-assunto-p);
+            @extend .corLetraAssunto;
+        }
+
+        .assunto {
+            display: flex;
+            justify-content: center;
+        }
+
+        .score {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .like {
+                color: green;
+            }
+
+            .dislike {
+                color: red;
+            }
+
+            .star {
+                color: gold;
+            }
+        }
+    }
+
+    .botao {
+        display: flex;
+        justify-content: center;
     }
 }

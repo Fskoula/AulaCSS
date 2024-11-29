@@ -1,10 +1,6 @@
+@charset "UTF-8";
 body {
-  background-color: #E6F4FF;
-}
-
-img {
-  width: 40px;
-  height: 40px;
+  background-color: #87aecb;
 }
 
 nav {
@@ -34,12 +30,12 @@ nav a {
 }
 
 main {
-  background-image: url("https://b2895550.smushcdn.com/2895550/wp-content/uploads/2024/01/chapeu-de-palha-mantidos-em-cadeira-de-praia-vazia-1024x683.jpg?lossy=1&strip=1&webp=1.jpg");
+  background-image: url("../img/Ceu.jfif");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 700px;
-  margin-left: 15%;
-  margin-right: 15%;
+  min-height: 800px;
+  margin-left: 10%;
+  margin-right: 10%;
   text-align: center;
   align-items: center;
   display: flex;
@@ -47,14 +43,18 @@ main {
   justify-content: center;
 }
 
-h1,
-h4 {
-  color: #000000;
+h1 {
+  color: #123249;
   font-size: xx-large;
 }
 
+h4 {
+  color: #000000;
+  font-size: larger;
+}
+
 input {
-  border: 2x solid #0c6aad;
+  border: 2px solid #0c6aad;
   margin: 5px;
   font-size: medium;
 }
@@ -86,6 +86,7 @@ button:hover {
   justify-content: space-between;
   margin-left: 10%;
   margin-right: 10%;
+  /*Função mixin*/
 }
 .atividadeMixin img {
   width: 220px;
@@ -124,14 +125,62 @@ button:hover {
   flex-direction: row;
 }
 
+/*Detalhe da tabela*/
+.ultimo-conteudo h2 {
+  text-align: center;
+  color: #123249;
+}
 .ultimo-conteudo table {
   width: 100%;
   color: #203a21;
   text-align: center;
+  /*Função*/
+  /*Herança*/
+}
+.ultimo-conteudo table .corLetraAssunto, .ultimo-conteudo table .quarta, .ultimo-conteudo table .terceira, .ultimo-conteudo table .primeiras {
+  color: #ffffff;
+  text-transform: uppercase;
 }
 .ultimo-conteudo table th {
-  border: 1px solid #203a21;
+  border-bottom: 2px solid #203a21;
+  text-transform: uppercase;
 }
 .ultimo-conteudo table td {
   border-bottom: 1px solid #203a21;
+  padding: 30px;
+}
+.ultimo-conteudo table .primeiras {
+  background-color: #0c6aad;
+  min-width: 40%;
+}
+.ultimo-conteudo table .terceira {
+  background-color: #58595a;
+  min-width: 40%;
+}
+.ultimo-conteudo table .quarta {
+  background-color: #000000;
+  min-width: 40%;
+}
+.ultimo-conteudo table .assunto {
+  display: flex;
+  justify-content: center;
+}
+.ultimo-conteudo table .score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.ultimo-conteudo table .score .like {
+  color: green;
+}
+.ultimo-conteudo table .score .dislike {
+  color: red;
+}
+.ultimo-conteudo table .score .star {
+  color: gold;
+}
+.ultimo-conteudo .botao {
+  display: flex;
+  justify-content: center;
 }

@@ -71,3 +71,51 @@ body {
 .atividade2 h3 {
   color: #d9f203;
 }
+
+/*Colunas para fazer a grid e dividir a pagina*/
+.loop .col-1 {
+  width: 8.3333333333%;
+}
+.loop .col-2 {
+  width: 16.6666666667%;
+}
+.loop .col-3 {
+  width: 25%;
+}
+.loop .col-4 {
+  width: 33.3333333333%;
+}
+.loop .col-5 {
+  width: 41.6666666667%;
+}
+.loop .col-6 {
+  width: 50%;
+}
+.loop .col-7 {
+  width: 58.3333333333%;
+}
+.loop .col-8 {
+  width: 66.6666666667%;
+}
+.loop .col-9 {
+  width: 75%;
+}
+.loop .col-10 {
+  width: 83.3333333333%;
+}
+.loop .col-11 {
+  width: 91.6666666667%;
+}
+.loop .col-12 {
+  width: 100%;
+}
+.loop div {
+  height: 50px;
+  background-color: #ff99db;
+  border: 2px solid #0d0d55;
+}
+.loop .linha {
+  display: flex;
+  flex-direction: row;
+  background-color: #d2c7ff;
+}
