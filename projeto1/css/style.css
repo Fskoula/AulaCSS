@@ -69,60 +69,67 @@ button:hover {
   background-color: rgb(23.043956044, 64.010989011, 93.456043956);
 }
 
-.artigo-irlanda {
+/*Herança*/
+.modificaConteudos, .bandeira, .artigo-irlanda {
   margin: 15%;
-  font-size: 30px;
-  line-height: 60px;
-  padding: 20px;
+  font-size: 20px;
+  line-height: 50px;
+  padding: 10px;
 }
-.artigo-irlanda img {
-  min-height: 500px;
-  width: 1000px;
+
+/*Herança*/
+.imagConteudo, .bandeira img, .artigo-irlanda img {
+  min-height: 400px;
+  width: 800px;
 }
 
 .atividadeMixin {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-left: 10%;
-  margin-right: 10%;
+  justify-content: space-evenly;
+  margin: 5%;
   /*Função mixin*/
 }
 .atividadeMixin img {
-  width: 220px;
-  height: 200px;
+  width: 200px;
+  height: 150px;
 }
 .atividadeMixin .car-primario {
   background-color: #9fd7ff;
   border-radius: 10px;
-  padding: 15px;
+  padding: 5px;
   width: 300px;
-  min-height: 250px;
+  min-height: 300px;
+  text-align: center;
 }
 .atividadeMixin .car-secundario {
   background-color: #9fd7ff;
   border-radius: 10px;
-  padding: 15px;
+  padding: 5px;
   width: 300px;
-  min-height: 250px;
+  min-height: 300px;
+  text-align: center;
 }
 .atividadeMixin .car-terciario {
   background-color: #9fd7ff;
   border-radius: 10px;
-  padding: 15px;
+  padding: 5px;
   width: 300px;
-  min-height: 250px;
+  min-height: 300px;
+  text-align: center;
 }
 .atividadeMixin .car-quarternario {
   background-color: #9fd7ff;
   border-radius: 10px;
-  padding: 15px;
+  padding: 5px;
   width: 300px;
-  min-height: 250px;
+  min-height: 300px;
+  text-align: center;
 }
 .atividadeMixin button {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 /*Detalhe da tabela*/
@@ -184,3 +191,5 @@ button:hover {
   display: flex;
   justify-content: center;
 }
+
+/*# sourceMappingURL=style.css.map */
