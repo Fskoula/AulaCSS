@@ -106,7 +106,8 @@ body {
     }
 }
 
-/*Colunas para fazer a grid e dividir a pagina*/
+/*Colunas, para fazer a grid e dividir a pagina*/
+/*normalmente no pc é 12, no mobile é 8*/
 .loop {
     $tamanhoTela: 12;
 
@@ -127,4 +128,20 @@ body {
         flex-direction: row;
         background-color: #d2c7ff;
     }
+}
+
+.animacoes {
+    button {
+        background-color: #ff99db;
+        transition: background-color 1s, transform 1s;
+        padding: 10px;
+    }
+
+    button:hover {
+        background-color: #d9f203;
+        transform: scale(1.5);
+    }
+
+   /* fazerm em casa 
+   @keyframes NOME {}*/
 }

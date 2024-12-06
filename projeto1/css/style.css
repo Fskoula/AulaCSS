@@ -101,6 +101,9 @@ button:hover {
   width: 300px;
   min-height: 300px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .atividadeMixin .car-secundario {
   background-color: #9fd7ff;
@@ -109,6 +112,9 @@ button:hover {
   width: 300px;
   min-height: 300px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .atividadeMixin .car-terciario {
   background-color: #9fd7ff;
@@ -117,6 +123,9 @@ button:hover {
   width: 300px;
   min-height: 300px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .atividadeMixin .car-quarternario {
   background-color: #9fd7ff;
@@ -125,11 +134,13 @@ button:hover {
   width: 300px;
   min-height: 300px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .atividadeMixin button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  width: 100px;
+  margin-left: 30%;
 }
 
 /*Detalhe da tabela*/
@@ -192,4 +203,69 @@ button:hover {
   justify-content: center;
 }
 
-/*# sourceMappingURL=style.css.map */
+footer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(106.5348837209, 154.7860465116, 190.6651162791);
+  padding-top: 3%;
+}
+footer .colu-1 {
+  width: 8.3333333333%;
+}
+footer .colu-2 {
+  width: 16.6666666667%;
+}
+footer .colu-3 {
+  width: 25%;
+}
+footer .colu-4 {
+  width: 33.3333333333%;
+}
+footer .colu-5 {
+  width: 41.6666666667%;
+}
+footer .colu-6 {
+  width: 50%;
+}
+footer .colu-7 {
+  width: 58.3333333333%;
+}
+footer .colu-8 {
+  width: 66.6666666667%;
+}
+footer .colu-9 {
+  width: 75%;
+}
+footer .colu-10 {
+  width: 83.3333333333%;
+}
+footer .colu-11 {
+  width: 91.6666666667%;
+}
+footer .colu-12 {
+  width: 100%;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer img {
+  width: 40px;
+  height: 40px;
+}
+footer h4, footer h3 {
+  color: #123249;
+  text-decoration: underline;
+}
+footer li {
+  list-style: none;
+  padding: 3%;
+}
+footer a {
+  text-decoration: none;
+  color: #123249;
+  font-size: larger;
+}

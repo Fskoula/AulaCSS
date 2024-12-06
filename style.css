@@ -72,7 +72,8 @@ body {
   color: #d9f203;
 }
 
-/*Colunas para fazer a grid e dividir a pagina*/
+/*Colunas, para fazer a grid e dividir a pagina*/
+/*normalmente no pc é 12, no mobile é 8*/
 .loop .col-1 {
   width: 8.3333333333%;
 }
@@ -120,4 +121,12 @@ body {
   background-color: #d2c7ff;
 }
 
-/*# sourceMappingURL=style.css.map */
+.animacoes button {
+  background-color: #ff99db;
+  transition: background-color 1s, transform 1s;
+  padding: 10px;
+}
+.animacoes button:hover {
+  background-color: #d9f203;
+  transform: scale(1.5);
+}
