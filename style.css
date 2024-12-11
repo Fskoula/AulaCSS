@@ -130,3 +130,25 @@ body {
   background-color: #d9f203;
   transform: scale(1.5);
 }
+.animacoes .circulo {
+  border-radius: 50%;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  background-color: rgb(23, 219, 23);
+  margin: 10px;
+  box-shadow: inset -10px -10px 10px green, inset 3px 3px 5px #FFF;
+}
+@keyframes simple {
+  50% {
+    transform: translateY(-70px);
+  }
+}
+.animacoes div {
+  animation: simple 2s infinite;
+  height: 50px;
+  width: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */
